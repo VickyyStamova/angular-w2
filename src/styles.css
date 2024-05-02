@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    color: #420242;
+  }
+  @keyframes backgroundAnimation {
+    0% { background-color: #ec96dd; }
+    25% { background-color: #f67cf0; }
+    50% { background-color: #aa2cdc; }
+    75% { background-color:#7ca9f6; }
+    100% { background-color: #a1ebf8 }
+  }
+  
+  body {
+    animation: backgroundAnimation 15s linear infinite;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1em;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-color: #610761;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #4b0082;
+  }
+  
+  input {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #800080;
+  }

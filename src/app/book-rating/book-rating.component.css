@@ -1,0 +1,86 @@
+.body {
+  background-color: #d3ffe9;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:700px;
+}
+
+.book-rating-container {
+  width: 800px;
+  padding: 50px;
+  border: 1px solid #ff8bda;
+  border-radius: 10px;
+  background-color: rgb(250, 171, 250,0.8);
+  align-items: center;
+}
+
+
+.button-container {
+  margin-bottom: 10px;
+}
+
+.button-container button {
+  margin-right: 5px;
+  background-color: #63078a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.button-container button:hover{
+  background-color: rgb(224, 109, 244);
+}
+
+.book-info {
+  display: flex;
+}
+
+.book-image {
+  width: 200px; /* Adjust size as needed */
+  height: auto;
+  margin-right: 20px; /* Adjust spacing between image and text */
+}
+
+.book-details {
+  flex: 1;
+}
+
+
+.input-field {
+  margin-bottom: 5px;
+  padding: 5px;
+  width: calc(100% - 12px); 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.update-button {
+  background-color: #870570;
+}
+.update-button:hover{
+  background-color: #eb48bd;
+}
+
+.completion-container {
+  text-align: center;
+}
+
+.restart-button, .finish-button {
+  margin: 0 10px;
+  padding: 8px 16px;
+  background-color: #870570;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.restart-button:hover, .finish-button:hover {
+  background-color: #eb48bd;
+}

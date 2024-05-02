@@ -1,0 +1,40 @@
+<div class="container">
+  <div *ngIf="currentBook && !allBooksRated" class="book-rating-container">
+    <div class="book-info">
+      <img [src]="currentBook.image" alt="{{ currentBook.title }} Image" class="book-image">
+      <div class="book-details">
+        <h2>{{ currentBook.title }}</h2>
+        <p>{{ currentBook.description }}</p>
+        <p>
+          Authors:
+          <span *ngFor="let author of currentBook.authors; let isLast = last">{{ author }}{{ isLast ? "" : ", " }}</span>
+        </p>
+        <p>Rating: {{ currentBook.rating }}</p>
+      </div>
+    </div>
+
+  <h2>Rate book</h2>
+  <div class="button-container">
+    <button *ngFor="let rating of [1, 2, 3, 4, 5]" (click)="rateBook(rating)">
+      <span *ngIf="currentBook.rating < rating">&#9734;</span>
+      <span *ngIf="currentBook.rating >= rating">&#9733;</span>
+    </button>
+  </div>
+
+  <div *ngIf="currentBook.rating > 0">
+    <h2>Update book</h2>
+    <input [(ngModel)]="currentBook.title" placeholder="Title" class="input-field" />
+    <input [(ngModel)]="currentBook.description" placeholder="Description" class="input-field" />
+    <div *ngFor="let author of currentBook.authors; let i = index">
+      <input [(ngModel)]="currentBook.authors[i]" placeholder="Author" class="input-field" />
+    </div>
+    <button (click)="updateBook(currentBook.title, currentBook.description, currentBook.authors)" class="update-button">Update</button>
+  </div>
+</div>
+
+<div *ngIf="allBooksRated" class="completion-container">
+  <h2>Rating Completed</h2>
+  <button class="restart-button" (click)="restart()">Rate Again</button>
+  <button class="finish-button" (click)="finish()">Finish</button>
+</div>
+</div>
